@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Loop</title>
+  </head>
+  <body>
+    <div id="clock">00:00:00</div>
+    <button onclick="stop()">Stop TimeOut</button>
+    <script>
+      // console.log("Order Placed");
+      // setTimeout(() => console.log("Preparing Order"), 0);
+      // Promise.resolve().then(() => console.log("Order Confirmed"));
+      // console.log("Order Completed");
+      // console.log('first')
+      // setTimeout(() => {
+      //   console.log("timeout");
+      // },100);
+      // for(let i=0;i<1000000;i++){
+
+      // }
+      // console.log("second");
+      // console.log("second");
+      // console.log("second");
+      // console.log("second");
+      // console.log("second");
+      // console.log("second");
+      // console.log("second");
+
+      // setTime single time execute ;
+      // setTimeout(callback,time)
+      // function greet() {
+      //   console.log("Hello aaryan");
+      // }
+      // // setTimeout(callback,time)
+      // let timer = setTimeout(function () {
+      //   console.log("Hello Aranav");
+      // }, 5000);
+      // function stop() {
+      //   clearTimeout(timer);
+      // }
+
+      // let condition = setTimeout(() => {
+      //   console.log("Hello Manan");
+      // }, 2000);
+      // let isComing = false;
+      // if (isComing == false) {
+      //   console.log("Timer Clear")
+      //   clearTimeout(condition);
+      // }
+
+      // setInterval repeatedly execute
+      // let count = 0;
+      // let timer = setInterval(() => {
+      //   count++;
+      //   if (count == 10) {
+      //     clearInterval(timer);
+      //   }
+      //   console.log("Hello Arnav", count);
+      // }, 1000);
+
+      // setInterval(() => {
+      //   const date = new Date();
+      //   console.log(date.getHours(), date.getMinutes(), date.getSeconds());
+      // }, 1000);
+      // let time = 5;
+
+      setInterval(() => {
+        const date = new Date();
+        const hours = String(date.getHours()).padStart(2, "0"); // Get hours (0-23)
+        const minutes = String(date.getMinutes()).padStart(2, "0"); // Get minutes (0-59)
+        const seconds = String(date.getSeconds()).padStart(2, "0");
+
+        let timeSting = `${hours}:${minutes}:${seconds}`;
+        document.getElementById("clock").innerHTML = timeSting;
+      }, 1000);
+      // console.log(date.getSeconds());
+      // console.log(String(date.getSeconds()).padStart(2, "0"));
+    </script>
+  </body>
+</html>
